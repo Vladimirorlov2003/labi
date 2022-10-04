@@ -1,0 +1,14 @@
+!/bin/bash
+chmod -R 777 file
+mkdir folder
+
+mkdir folder1
+
+read -p "URL: " answer
+cd folder
+git clone $answer
+found="$(ls -tr | tail)"
+mv $found ../folder1
+rm -rf ../folder
+sudo chmod -R 600 ../folder1
+echo "Лабораторная работа 1 выполнена"
